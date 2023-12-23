@@ -5,7 +5,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:rev_delivery/core/controllers/splashController.dart';
-import 'package:step_progress_indicator/step_progress_indicator.dart';
+
 
 
 class SplashScreen extends GetView {
