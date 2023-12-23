@@ -1,9 +1,8 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:rev_delivery/app/appColors.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:rev_delivery/app/appTextstyle.dart';
 import 'package:rev_delivery/utils/size_utils.dart';
+
 
 class Button extends GetView {
   Button({

@@ -19,4 +19,20 @@ class AppTextStyle {
     fontStyle: FontStyle.normal,
     fontSize: 16.0,
   );
+
+  static const  TextStyle heading = TextStyle(
+    color: AppColors.black,
+    fontWeight: FontWeight.w800,
+    fontFamily: "Montserrat-Bold",
+    fontStyle: FontStyle.normal,
+    fontSize: 30.0,
+  );
+
+    static const  TextStyle subheading = TextStyle(
+    color: AppColors.black,
+    fontWeight: FontWeight.w600,
+    fontFamily: "Montserrat",
+    fontStyle: FontStyle.normal,
+    fontSize: 20.0,
+  );
 }

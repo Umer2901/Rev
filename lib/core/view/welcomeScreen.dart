@@ -6,7 +6,7 @@ import 'package:rev_delivery/app/appTextstyle.dart';
 import 'package:rev_delivery/routes/appRoutes.dart';
 import 'package:rev_delivery/utils/size_utils.dart';
 import 'package:rev_delivery/components/customButton.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
+
 
 class WelcomeScreen extends GetView {
   @override
