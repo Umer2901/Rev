@@ -7,8 +7,8 @@ import 'package:rev_delivery/utils/size_utils.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:rev_delivery/components/customButton.dart';
 import 'package:rev_delivery/components/customedivider.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
-import 'package:step_progress_indicator/step_progress_indicator.dart';
+
+
 
 class RegisterScreen extends GetView {
 
@@ -81,11 +81,11 @@ class RegisterScreen extends GetView {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomDivider(color: AppColors.primary),
+                CustomDivider(color: AppColors.primary,width: 116.0),
                 SizedBox(
                   width: getHorizontalSize(5),
                 ),
-                CustomDivider(color: AppColors.gray),
+                CustomDivider(color: AppColors.gray,width: 116.0),
               ],
             ),
             SizedBox(
