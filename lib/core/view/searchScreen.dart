@@ -50,10 +50,11 @@ class SearchScreen extends GetView {
             ),
             SizedBox(height: getVerticalSize(15),),
              SearchBar(
-              trailing:  [Icon(Icons.search_outlined,color: AppColors.gray,size: 35,)],
+              trailing:  const [Icon(Icons.search_outlined,color: AppColors.gray,size: 35,)],
               hintText: 'Search',
               hintStyle: MaterialStatePropertyAll(AppTextStyle.subheading.copyWith(color: AppColors.gray)),
               shadowColor: const MaterialStatePropertyAll(Colors.transparent),
+              backgroundColor: const MaterialStatePropertyAll(AppColors.white),
             ),
             SizedBox(height: getVerticalSize(15)),
             Expanded(
@@ -87,7 +88,7 @@ class SearchScreen extends GetView {
           revonTap: () {
             Get.toNamed(AppRoutes.products);
           },
-          profileonTap: () {},
+          profileonTap: () {Get.toNamed(AppRoutes.profile);},
           searchonTap: () {
             Get.toNamed(AppRoutes.search);
           }),

@@ -7,17 +7,31 @@ import 'package:rev_delivery/app/appTextstyle.dart';
 import 'package:rev_delivery/utils/size_utils.dart';
 
 class CustomBottombar extends GetView {
-  CustomBottombar({super.key, required this.revonTap, required this.profileonTap, required this.searchonTap});
+  CustomBottombar(
+      {super.key,
+      required this.revonTap,
+      required this.profileonTap,
+      required this.searchonTap,
+      required this.revtextcolor,
+      required this.profileiconcolor,
+      required this.profiletextcolor,
+      required this.searchiconcolor,
+      required this.searchtextcolor});
   VoidCallback revonTap;
   VoidCallback searchonTap;
   VoidCallback profileonTap;
+  Color revtextcolor;
+  Color searchiconcolor;
+  Color searchtextcolor;
+  Color profileiconcolor;
+  Color profiletextcolor;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: getVerticalSize(96),
       width: double.infinity,
       decoration: const BoxDecoration(
-        color: AppColors.white,
+          color: AppColors.white,
           border: Border(top: BorderSide(color: AppColors.lightblue))),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -41,24 +55,26 @@ class CustomBottombar extends GetView {
                             AppImages.logo1,
                             fit: BoxFit.fill,
                           )),
-                      const Text(
+                      Text(
                         'Browse',
-                        style: AppTextStyle.fieldtitle,
+                        style: AppTextStyle.fieldtitle
+                            .copyWith(color: revtextcolor),
                       ),
                     ],
                   ),
                 ),
                 InkWell(
                   onTap: searchonTap,
-                  child: const Column(
+                  child: Column(
                     children: [
                       Icon(
                         Icons.search,
-                        color: AppColors.black,
+                        color: searchiconcolor,
                       ),
                       Text(
                         'Search',
-                        style: AppTextStyle.fieldtitle,
+                        style: AppTextStyle.fieldtitle
+                            .copyWith(color: searchtextcolor),
                       )
                     ],
                   ),
@@ -69,11 +85,12 @@ class CustomBottombar extends GetView {
                     children: [
                       Icon(
                         Icons.person_2_outlined,
-                        color: AppColors.black,
+                        color: profileiconcolor,
                       ),
                       Text(
                         'profile',
-                        style: AppTextStyle.fieldtitle,
+                        style: AppTextStyle.fieldtitle
+                            .copyWith(color: profiletextcolor),
                       )
                     ],
                   ),

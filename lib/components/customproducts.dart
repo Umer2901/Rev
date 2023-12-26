@@ -9,10 +9,15 @@ import 'package:rev_delivery/utils/size_utils.dart';
 
 
 class CustomProduct extends GetView{
+  CustomProduct({super.key, required this.onTap, required this.image,required this.name, required this.price});
+  VoidCallback onTap;
+  String image;
+  String name;
+  String price;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: getVerticalSize(220),
+      height: getVerticalSize(240),
       width: getHorizontalSize(169),
       decoration: BoxDecoration(
         border: Border.all(color: AppColors.lightgray),
@@ -22,18 +27,21 @@ class CustomProduct extends GetView{
         padding: getPadding(left: getHorizontalSize(8),right: getHorizontalSize(8),top: getVerticalSize(5)),
         child: Column(
           children: [
-            Container(
-              height: getVerticalSize(150),
-              width: getHorizontalSize(130),
-              decoration: const BoxDecoration(
-                image: DecorationImage(image: AssetImage(AppImages.nerds),fit: BoxFit.fill),
+            InkWell(
+              onTap: onTap,
+              child: Container(
+                height: getVerticalSize(150),
+                width: getHorizontalSize(130),
+                decoration:  BoxDecoration(
+                  image: DecorationImage(image: AssetImage(image),fit: BoxFit.fill),
+                ),
               ),
             ),
-            Text('Nerds Gummy Clusters',style: AppTextStyle.subheading.copyWith(fontSize: 12),),
+            Text(name,style: AppTextStyle.subheading.copyWith(fontSize: 12),),
             SizedBox(height: getVerticalSize(5),),
             Row(
               children: [
-                Text('\$3.38',style: AppTextStyle.subheading.copyWith(fontWeight: FontWeight.w400,fontSize: 12),),
+                Text(price,style: AppTextStyle.subheading.copyWith(fontWeight: FontWeight.w400,fontSize: 12),),
                 const Spacer(),
                 Container(
                   height: 25,

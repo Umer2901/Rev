@@ -95,6 +95,9 @@ flutter:
     - family: Inter
       fonts:
         - asset: assets/font/Inter-Regular.ttf
+    - family: Sans
+      fonts:
+        - asset: assets/font/DMSans.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

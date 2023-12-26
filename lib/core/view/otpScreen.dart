@@ -18,12 +18,12 @@ class OtpScreen extends GetView {
       body: Padding(
         padding: getPadding(
           top: getVerticalSize(147),
-          left: getHorizontalSize(20),
-          right: getHorizontalSize(20),
+          //left: getHorizontalSize(20),
+          //right: getHorizontalSize(20),
           bottom: getVerticalSize(25),
         ),
         child: Column(
-          //crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text('Enter Code', style: AppTextStyle.heading),
             SizedBox(height: getVerticalSize(15)),
@@ -31,45 +31,37 @@ class OtpScreen extends GetView {
               'We’ve sent an SMS with an activation',
               style: AppTextStyle.normalText,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                RichText(
-                  text: TextSpan(
-                    children: <InlineSpan>[
-                      const TextSpan(
-                          text: 'Code to your phone',
-                          style: AppTextStyle.normalText),
-                      //SizedBox(width: getHorizontalSize(5))
-                      TextSpan(
-                        text: '+33 2 94 27 84 11',
-                        style: AppTextStyle.normalText
-                            .copyWith(color: AppColors.black),
-                      ),
-                    ],
+            RichText(
+              text: TextSpan(
+                children: <InlineSpan>[
+                  const TextSpan(
+                      text: 'Code to your phone',
+                      style: AppTextStyle.normalText),
+                  TextSpan(
+                    text: '+33 2 94 27 84 11',
+                    style: AppTextStyle.normalText
+                        .copyWith(color: AppColors.black),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             SizedBox(
               height: getVerticalSize(35),
             ),
-            Row(
-              children: [
-                OTPTextField(
-                  length: 5,
-                  keyboardType: TextInputType.number,
-                  spaceBetween: 7.0,
-                  fieldWidth: 58,
-                  fieldStyle: FieldStyle.box,
-                  obscureText: false,
-                  otpFieldStyle: OtpFieldStyle(
-                    focusBorderColor: AppColors.black,
-                  ),
-                  style: AppTextStyle.normalText.copyWith(color: AppColors.white),
-                ),
-              ],
+
+            OTPTextField(
+              length: 5,
+              keyboardType: TextInputType.number,
+              spaceBetween: 7.0,
+              fieldWidth: 58,
+              fieldStyle: FieldStyle.box,
+              obscureText: false,
+              otpFieldStyle: OtpFieldStyle(
+                focusBorderColor: AppColors.black,
+              ),
+              style: AppTextStyle.normalText.copyWith(color: AppColors.white),
             ),
+
             SizedBox(
               height: getVerticalSize(15),
             ),
@@ -92,9 +84,9 @@ class OtpScreen extends GetView {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomDivider(color: AppColors.gray,width: 116.0),
+                CustomDivider(color: AppColors.gray, width: 116.0),
                 SizedBox(width: getHorizontalSize(5)),
-                CustomDivider(color: AppColors.primary,width: 116.0),
+                CustomDivider(color: AppColors.primary, width: 116.0),
               ],
             ),
             SizedBox(height: getVerticalSize(10)),

@@ -8,5 +8,8 @@ class AppColors {
   static const Color gray = Color(0xff9F9BA5);
   static const Color shady = Color(0xff979797);
   static const Color lightblue = Color(0xffBEC8C8);
+  static const Color light = Color(0xffF3F0F0);
+  static const Color maroon = Color(0xff181D27);
+  static const Color sky = Color(0xffACACAC);
 
 }

@@ -50,11 +50,27 @@ class AppTextStyle {
     fontSize: 14.0,
   );
 
-    static const TextStyle hinttext = TextStyle(
+  static const TextStyle hinttext = TextStyle(
     color: AppColors.gray,
     fontWeight: FontWeight.w400,
     fontFamily: "Montserrat",
     fontStyle: FontStyle.normal,
     fontSize: 16.0,
+  );
+
+  static const TextStyle profileText = TextStyle(
+    color: AppColors.maroon,
+    fontWeight: FontWeight.w600,
+    fontFamily: "Sans",
+    fontStyle: FontStyle.normal,
+    fontSize: 19.0,
+  );
+
+  static const TextStyle smallText = TextStyle(
+    color: AppColors.shady,
+    fontWeight: FontWeight.w400,
+    fontFamily: "Montserrat",
+    fontStyle: FontStyle.normal,
+    fontSize: 12.0,
   );
 }

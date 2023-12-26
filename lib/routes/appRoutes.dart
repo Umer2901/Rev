@@ -8,5 +8,9 @@ abstract class AppRoutes{
   static const String store  = '/store';
   static const String products  = '/products';
   static const String search  = '/search';
+  static const String profile  = '/profile';
+  static const String contactus  = '/contactus';
+  static const String productDetail  = '/productDetail';
+  static const String addtocart  = '/addtocart';
 
 }

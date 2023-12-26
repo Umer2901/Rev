@@ -37,7 +37,7 @@ class WelcomeScreen extends GetView {
               bordercolor: Colors.transparent,
               buttoncolor: AppColors.white,
               textcolor: AppColors.primary,
-              onTap: () {}),
+              onTap: () {Get.toNamed(AppRoutes.login);}),
           SizedBox(height: getVerticalSize(20),),
            Button(
               buttonheight: 54.0,
