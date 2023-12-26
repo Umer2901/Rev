@@ -7,4 +7,9 @@ class ProductController extends GetxController{
   updatedIndex(index) {
     currentIndex.value = index;
   }
+  String valuechoose='Please Select';
+  void onChange(value){
+    valuechoose = value;
+  }
 }
+

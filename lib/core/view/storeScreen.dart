@@ -45,17 +45,20 @@ class StoreScreen extends GetView {
                     SizedBox(height: getVerticalSize(15),),
                     Padding(
                       padding: getPadding(left: getHorizontalSize(16),right: getHorizontalSize(16)),
-                      child: Row(children: [
-                        SizedBox(
-                          height: 16,
-                          width: 44,
-                          child: Image.asset(AppImages.logo1,fit: BoxFit.fill,)),
-                      
-                      SizedBox(width: getHorizontalSize(5),),
-                      Text('UCLA',style: AppTextStyle.subheading.copyWith(fontSize: 18),),
-                      const Spacer(),
-                      const Icon(Icons.arrow_forward_ios,size: 15.0)
-                      ],),
+                      child: InkWell(
+                        onTap: (){Get.toNamed(AppRoutes.products);},
+                        child: Row(children: [
+                          SizedBox(
+                            height: 16,
+                            width: 44,
+                            child: Image.asset(AppImages.logo1,fit: BoxFit.fill,)),
+                        
+                        SizedBox(width: getHorizontalSize(5),),
+                        Text('UCLA',style: AppTextStyle.subheading.copyWith(fontSize: 18),),
+                        const Spacer(),
+                        const Icon(Icons.arrow_forward_ios,size: 15.0)
+                        ],),
+                      ),
                     ),
                     SizedBox(height: getVerticalSize(5),),
                     const Divider(color: AppColors.lightblue,),
@@ -84,51 +87,60 @@ class StoreScreen extends GetView {
                     SizedBox(height: getVerticalSize(10),),
                     Padding(
                       padding: getPadding(left: getHorizontalSize(16),right: getHorizontalSize(16)),
-                      child: Row(children: [
-                        SizedBox(
-                          height: 16,
-                          width: 44,
-                          child: Image.asset(AppImages.logo1,fit: BoxFit.fill,)),
-                      
-                      SizedBox(width: getHorizontalSize(5),),
-                      Text('UCSB',style: AppTextStyle.subheading.copyWith(fontSize: 18),),
-                      const Spacer(),
-                      const Icon(Icons.arrow_forward_ios,size: 15.0)
-                      ],),
+                      child: InkWell(
+                        onTap: (){Get.toNamed(AppRoutes.products);},
+                        child: Row(children: [
+                          SizedBox(
+                            height: 16,
+                            width: 44,
+                            child: Image.asset(AppImages.logo1,fit: BoxFit.fill,)),
+                        
+                        SizedBox(width: getHorizontalSize(5),),
+                        Text('UCSB',style: AppTextStyle.subheading.copyWith(fontSize: 18),),
+                        const Spacer(),
+                        const Icon(Icons.arrow_forward_ios,size: 15.0)
+                        ],),
+                      ),
                     ),
                     SizedBox(height: getVerticalSize(5),),
                     const Divider(color: AppColors.lightblue,),
                     SizedBox(height: getVerticalSize(10),),
                     Padding(
                       padding: getPadding(left: getHorizontalSize(16),right: getHorizontalSize(16)),
-                      child: Row(children: [
-                        SizedBox(
-                          height: 16,
-                          width: 44,
-                          child: Image.asset(AppImages.logo1,fit: BoxFit.fill,)),
-                      
-                      SizedBox(width: getHorizontalSize(5),),
-                      Text('ASU',style: AppTextStyle.subheading.copyWith(fontSize: 18),),
-                      const Spacer(),
-                      const Icon(Icons.arrow_forward_ios,size: 15.0)
-                      ],),
+                      child: InkWell(
+                        onTap: (){Get.toNamed(AppRoutes.products);},
+                        child: Row(children: [
+                          SizedBox(
+                            height: 16,
+                            width: 44,
+                            child: Image.asset(AppImages.logo1,fit: BoxFit.fill,)),
+                        
+                        SizedBox(width: getHorizontalSize(5),),
+                        Text('ASU',style: AppTextStyle.subheading.copyWith(fontSize: 18),),
+                        const Spacer(),
+                        const Icon(Icons.arrow_forward_ios,size: 15.0)
+                        ],),
+                      ),
                     ),
                     SizedBox(height: getVerticalSize(5),),
                     const Divider(color: AppColors.lightblue,),
                     SizedBox(height: getVerticalSize(10),),
                     Padding(
                       padding: getPadding(left: getHorizontalSize(16),right: getHorizontalSize(16)),
-                      child: Row(children: [
-                        SizedBox(
-                          height: 16,
-                          width: 44,
-                          child: Image.asset(AppImages.logo1,fit: BoxFit.fill,)),
-                      
-                      SizedBox(width: getHorizontalSize(5),),
-                      Text('UT AUSTIN',style: AppTextStyle.subheading.copyWith(fontSize: 18),),
-                      const Spacer(),
-                      const Icon(Icons.arrow_forward_ios,size: 15.0)
-                      ],),
+                      child: InkWell(
+                        onTap:(){Get.toNamed(AppRoutes.products);},
+                        child: Row(children: [
+                          SizedBox(
+                            height: 16,
+                            width: 44,
+                            child: Image.asset(AppImages.logo1,fit: BoxFit.fill,)),
+                        
+                        SizedBox(width: getHorizontalSize(5),),
+                        Text('UT AUSTIN',style: AppTextStyle.subheading.copyWith(fontSize: 18),),
+                        const Spacer(),
+                        const Icon(Icons.arrow_forward_ios,size: 15.0)
+                        ],),
+                      ),
                     ),
                     SizedBox(height: getVerticalSize(5),),
                     const Divider(color: AppColors.lightblue,),

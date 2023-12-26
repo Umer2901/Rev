@@ -26,3 +26,6 @@ List productList = [
   Products(AppImages.nerds, 'Nerds Gummy Clusters', '\$3.38',(){}),
   Products(AppImages.nerds, 'Nerds Gummy Clusters', '\$3.38',(){}),
 ];
+
+
+List categoryList = ['Category1', 'Category2', 'Category3'];

@@ -81,7 +81,7 @@ class CustomBottombar extends GetView {
                 ),
                 InkWell(
                   onTap: profileonTap,
-                  child: const Column(
+                  child:  Column(
                     children: [
                       Icon(
                         Icons.person_2_outlined,

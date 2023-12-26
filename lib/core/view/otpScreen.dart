@@ -1,87 +1,82 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:otp_text_field/style.dart';
-import 'package:otp_text_field/otp_field.dart';
 import 'package:rev_delivery/app/appColors.dart';
-import 'package:otp_text_field/otp_text_field.dart';
 import 'package:rev_delivery/app/appTextstyle.dart';
 import 'package:rev_delivery/routes/appRoutes.dart';
 import 'package:rev_delivery/utils/size_utils.dart';
+import 'package:timer_count_down/timer_count_down.dart';
 import 'package:rev_delivery/components/customButton.dart';
 import 'package:rev_delivery/components/customedivider.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
 class OtpScreen extends GetView {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: getPadding(
-          top: getVerticalSize(147),
-          //left: getHorizontalSize(20),
-          //right: getHorizontalSize(20),
-          bottom: getVerticalSize(25),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('Enter Code', style: AppTextStyle.heading),
-            SizedBox(height: getVerticalSize(15)),
-            const Text(
-              'We’ve sent an SMS with an activation',
-              style: AppTextStyle.normalText,
-            ),
-            RichText(
-              text: TextSpan(
-                children: <InlineSpan>[
-                  const TextSpan(
-                      text: 'Code to your phone',
-                      style: AppTextStyle.normalText),
-                  TextSpan(
+        body: Padding(
+      padding: getPadding(top: getVerticalSize(147),bottom: getVerticalSize(25)),
+      child: Column(
+        children: [
+          const Text(
+            'Enter Code',
+            style: AppTextStyle.heading,
+          ),
+          SizedBox(
+            height: getVerticalSize(15),
+          ),
+          const Text(
+            'We’ve sent an SMS with an activation',
+            style: AppTextStyle.normalText,
+          ),
+          RichText(
+            text: TextSpan(
+              children: <InlineSpan>[
+                const TextSpan(
+                    text: 'code to your phone ',
+                    style: AppTextStyle.normalText),
+                TextSpan(
                     text: '+33 2 94 27 84 11',
                     style: AppTextStyle.normalText
-                        .copyWith(color: AppColors.black),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: getVerticalSize(35),
-            ),
-
-            OTPTextField(
-              length: 5,
-              keyboardType: TextInputType.number,
-              spaceBetween: 7.0,
-              fieldWidth: 58,
-              fieldStyle: FieldStyle.box,
-              obscureText: false,
-              otpFieldStyle: OtpFieldStyle(
-                focusBorderColor: AppColors.black,
-              ),
-              style: AppTextStyle.normalText.copyWith(color: AppColors.white),
-            ),
-
-            SizedBox(
-              height: getVerticalSize(15),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Send Code again',
-                  style: AppTextStyle.normalText
-                      .copyWith(fontWeight: FontWeight.bold),
-                ),
-                SizedBox(width: getHorizontalSize(8)),
-                const Text(
-                  '00:20',
-                  style: AppTextStyle.normalText,
-                ),
+                        .copyWith(color: AppColors.black))
               ],
             ),
-            const Spacer(),
-            Row(
+          ),
+          SizedBox(
+            height: getVerticalSize(45),
+          ),
+          OtpTextField(
+            fieldWidth: 60.0,
+            //filled: false,
+            borderRadius: BorderRadius.circular(15),
+            showFieldAsBox: true,
+            focusedBorderColor: AppColors.black,
+            numberOfFields: 4,
+          ),
+          SizedBox(
+            height: getVerticalSize(20),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Send code again',
+                style: AppTextStyle.normalText.copyWith(color: AppColors.gray,fontWeight: FontWeight.w600),
+              ),
+              SizedBox(
+                width: getHorizontalSize(5),
+              ),
+              Countdown(
+
+                seconds: 20,
+                build: (BuildContext context, double time) =>
+                    Text(time.toString(),style: AppTextStyle.normalText,),
+                interval: Duration(milliseconds: 100),
+              )
+            ],
+          ),
+          const Spacer(),
+          Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomDivider(color: AppColors.gray, width: 116.0),
@@ -101,9 +96,15 @@ class OtpScreen extends GetView {
                 },
                 bordercolor: Colors.transparent,
                 buttonText: 'Continue'),
-          ],
-        ),
+        ],
       ),
-    );
+    ));
   }
 }
+          
+            
+          
+
+      
+    
+  
