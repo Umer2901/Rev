@@ -29,3 +29,4 @@ List productList = [
 
 
 List categoryList = ['Category1', 'Category2', 'Category3'];
+List storeList = ['UCLA', 'USC', 'UCSB','ASU','UT AUSTIN'];

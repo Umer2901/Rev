@@ -5,4 +5,8 @@ class AppImages {
   static const String nerds= 'assets/images/nerds.png';
   static const String popular = 'assets/images/popular.png';
   static const String profile = 'assets/images/profile.png';
+  static const String map = 'assets/images/map.png';
+  static const String payment1 = 'assets/images/payment.png';
+  static const String applepay = 'assets/images/applepay.png';
+  static const String visapay = 'assets/images/visapay.png';
 }

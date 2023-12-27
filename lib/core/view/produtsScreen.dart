@@ -61,15 +61,17 @@ class ProductsScreen extends GetView {
                       SizedBox(
                         height: getVerticalSize(55),
                         width: getHorizontalSize(140),
-                        child: DropdownButtonFormField(
+                        child: DropdownButtonFormField( 
+                          
                            icon: const Icon(Icons.keyboard_arrow_down,color: AppColors.white,size: 25,),
-                           dropdownColor: AppColors.white,
+                           dropdownColor: AppColors.primary,
                            iconSize: 25,
                            decoration: InputDecoration(
+                            
                             filled: true,
                             fillColor: AppColors.primary,
                             hintText: 'Category',
-                            hintStyle: AppTextStyle.subheading.copyWith(color: AppColors.white,fontSize: 5)
+                            hintStyle: AppTextStyle.subheading.copyWith(color: AppColors.white,fontSize: 16)
                            ),
                             onChanged: (newValue) {
                               controller.onChange(newValue);
@@ -77,7 +79,7 @@ class ProductsScreen extends GetView {
                             items: categoryList.map((value) {
                               return DropdownMenuItem(
                                 value: value,
-                                child: Text(value,style: AppTextStyle.subheading.copyWith(color: AppColors.gray,fontSize: 16),),
+                                child: Text(value,style: AppTextStyle.subheading.copyWith(color: AppColors.white,fontSize: 16),),
                               );
                             }).toList()),
                       ),

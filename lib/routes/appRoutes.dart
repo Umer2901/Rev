@@ -12,5 +12,11 @@ abstract class AppRoutes{
   static const String contactus  = '/contactus';
   static const String productDetail  = '/productDetail';
   static const String addtocart  = '/addtocart';
+  static const String viewcart  = '/viewcart';
+  static const String deliveryAddress = '/deliveryAddress';
+  static const String checkout = '/checkout';
+  static const String accountDetail = '/accountDetail';
+  static const String confirm = '/confirm';
+
 
 }

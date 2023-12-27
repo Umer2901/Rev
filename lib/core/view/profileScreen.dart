@@ -42,7 +42,7 @@ class ProfileScreen extends GetView {
                     color: AppColors.light,
                   ),
                   child: InkWell(
-                    onTap: (){},
+                    onTap: (){Get.toNamed(AppRoutes.accountDetail);},
                     child: Padding(
                       padding: getPadding(left: getHorizontalSize(12),right: getHorizontalSize(16),),
                       child: const Row(children: [

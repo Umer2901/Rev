@@ -8,10 +8,15 @@ import 'package:rev_delivery/core/view/splashScreen.dart';
 import 'package:rev_delivery/core/view/profileScreen.dart';
 import 'package:rev_delivery/core/view/produtsScreen.dart';
 import 'package:rev_delivery/core/view/welcomeScreen.dart';
+import 'package:rev_delivery/core/view/confirm_screen.dart';
 import 'package:rev_delivery/core/view/registerScreen.dart';
+import 'package:rev_delivery/core/view/checkout_screen.dart';
+import 'package:rev_delivery/core/view/view_cart_screen.dart';
 import 'package:rev_delivery/core/view/contactus_screen.dart';
 import 'package:rev_delivery/core/view/add_to_cart_screen.dart';
 import 'package:rev_delivery/core/view/product_open_screen.dart';
+import 'package:rev_delivery/core/view/account_detail_screen.dart';
+import 'package:rev_delivery/core/view/delivery_address_screen.dart';
 import 'package:rev_delivery/core/bindings/product_screen_binging.dart';
 
 class AppPages extends AppRoutes{
@@ -29,6 +34,11 @@ class AppPages extends AppRoutes{
     GetPage(name: AppRoutes.contactus, page: ()=> ContactUs(),),
     GetPage(name: AppRoutes.productDetail, page: ()=> ProductDetail(),),
     GetPage(name: AppRoutes.addtocart, page: ()=> AddToCart(),),
+    GetPage(name: AppRoutes.viewcart, page: ()=> CartView(),),
+    GetPage(name: AppRoutes.deliveryAddress, page: () => DeliveryAddress(),),
+    GetPage(name: AppRoutes.checkout, page: ()=> CheckoutScreen(),),
+    GetPage(name: AppRoutes.accountDetail, page: ()=> AccountDetailScreen(),),
+    GetPage(name: AppRoutes.confirm, page: ()=> ConfirmScreen(),),
 
   ];
 }

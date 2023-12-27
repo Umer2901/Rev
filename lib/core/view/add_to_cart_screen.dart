@@ -4,6 +4,7 @@ import 'package:rev_delivery/app/appColors.dart';
 import 'package:rev_delivery/app/appImages.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:rev_delivery/app/appTextstyle.dart';
+import 'package:rev_delivery/routes/appRoutes.dart';
 import 'package:rev_delivery/utils/size_utils.dart';
 import 'package:rev_delivery/components/customButton.dart';
 
@@ -194,7 +195,7 @@ class AddToCart extends GetView {
                     buttonRadius: 100.0,
                     buttoncolor: AppColors.white,
                     textcolor: AppColors.maroon,
-                    onTap: () {},
+                    onTap: () {Get.toNamed(AppRoutes.viewcart);},
                     bordercolor: AppColors.black,
                     buttonText: 'View Cart'),
                 Button(
