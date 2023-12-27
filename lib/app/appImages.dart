@@ -9,4 +9,5 @@ class AppImages {
   static const String payment1 = 'assets/images/payment.png';
   static const String applepay = 'assets/images/applepay.png';
   static const String visapay = 'assets/images/visapay.png';
+  static const String mapImage = 'assets/images/mapimage.png';
 }

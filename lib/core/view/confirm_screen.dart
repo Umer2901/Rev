@@ -101,7 +101,7 @@ class ConfirmScreen extends GetView {
                     width: getHorizontalSize(335),
                     decoration: BoxDecoration(
                         border: Border.all(color: AppColors.shady)),
-                    child: GoogleMap( mapType: MapType.normal,initialCameraPosition: _kGooglePlex,),
+                    child: Image.asset(AppImages.mapImage,fit: BoxFit.cover)
                   ),
                   Container(
                     height: getVerticalSize(110),
