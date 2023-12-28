@@ -46,7 +46,7 @@ class StoreScreen extends GetView {
                     Padding(
                       padding: getPadding(left: getHorizontalSize(16),right: getHorizontalSize(16)),
                       child: InkWell(
-                        onTap: (){Get.toNamed(AppRoutes.products);},
+                        onTap: (){Get.toNamed(AppRoutes.homeWraper);},
                         child: Row(children: [
                           SizedBox(
                             height: 16,

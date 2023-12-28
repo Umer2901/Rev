@@ -17,6 +17,7 @@ abstract class AppRoutes{
   static const String checkout = '/checkout';
   static const String accountDetail = '/accountDetail';
   static const String confirm = '/confirm';
+   static const String homeWraper = '/homeWraper';
 
 
 }

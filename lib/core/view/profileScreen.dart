@@ -196,24 +196,8 @@ class ProfileScreen extends GetView {
               ],
             ),
           ),
-          bottomNavigationBar:  Obx(
-                ()=>  CustomBottombar(
-                  profileiconcolor: controller.currentIndex == 1 ? AppColors.primary :AppColors.black,
-                  profiletextcolor: controller.currentIndex == 1 ? AppColors.primary :AppColors.black,
-                  revtextcolor: controller.currentIndex == 0 ? AppColors.primary :AppColors.black,
-                  searchiconcolor: controller.currentIndex == 2 ? AppColors.primary :AppColors.black,
-                  searchtextcolor: controller.currentIndex == 2 ? AppColors.primary :AppColors.black,
-                  revonTap: () {
-                  Get.toNamed(AppRoutes.products);
-                  // controller.updatedIndex(0);
-                }, profileonTap: () {
-                  Get.toNamed(AppRoutes.profile);
-                  // controller.updatedIndex(1);
-                }, searchonTap: () {
-                  Get.toNamed(AppRoutes.search);
-                  // controller.updatedIndex(2);
-                }),
-        ));
+          
+        );
       }
     );
   }

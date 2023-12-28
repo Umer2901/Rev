@@ -43,14 +43,24 @@ class CustomProduct extends GetView{
               children: [
                 Text(price,style: AppTextStyle.subheading.copyWith(fontWeight: FontWeight.w400,fontSize: 12),),
                 const Spacer(),
-                Container(
-                  height: 25,
-                  width: 25,
-                  decoration: BoxDecoration(
-                    color: AppColors.primary,
-                    borderRadius: BorderRadius.circular(25),
+                InkWell(
+                  onTap: (){Get.showSnackbar(
+                    const GetSnackBar(
+                    duration: Duration(milliseconds: 1000),
+                    snackPosition: SnackPosition.TOP,
+                    message: 'Added to Cart',
+                    backgroundColor: AppColors.primary,
+
+                  ));},
+                  child: Container(
+                    height: 25,
+                    width: 25,
+                    decoration: BoxDecoration(
+                      color: AppColors.primary,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: const Center(child: Icon(Icons.add,color: AppColors.white,)),
                   ),
-                  child: const Center(child: Icon(Icons.add,color: AppColors.white,)),
                 ),
               ],
             )

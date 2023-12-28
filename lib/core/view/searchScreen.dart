@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:rev_delivery/app/constant.dart';
 import 'package:rev_delivery/app/appColors.dart';
 import '../bindings/search_screen_bindings.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -44,7 +45,7 @@ class SearchScreen extends GetView {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             const Icon(
-                              Icons.shopping_cart,
+                              Icons.shopping_bag,
                               color: AppColors.white,
                             ),
                             Text('Cart',
@@ -72,7 +73,7 @@ class SearchScreen extends GetView {
                           GridView.builder(
                             physics: const ScrollPhysics(),
                             padding: const EdgeInsets.all(0),
-                            itemCount: 12,
+                            itemCount: SearchItemList.length,
                             shrinkWrap: true,
                               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                                   crossAxisCount: 2,
@@ -80,7 +81,7 @@ class SearchScreen extends GetView {
                                   mainAxisSpacing: getHorizontalSize(20),
                                   ),
                               itemBuilder: (context,index){
-                                return Popular();
+                                return Popular(image: SearchItemList[index].image, text: SearchItemList[index].text,);
                               })
                         ],
                       ),
@@ -90,25 +91,10 @@ class SearchScreen extends GetView {
               ],
             ),
           ),
-          bottomNavigationBar: Obx(
-                ()=>  CustomBottombar(
-                  profileiconcolor: controller.currentIndex == 1 ? AppColors.primary :AppColors.black,
-                  profiletextcolor: controller.currentIndex == 1 ? AppColors.primary :AppColors.black,
-                  revtextcolor: controller.currentIndex == 0 ? AppColors.primary :AppColors.black,
-                  searchiconcolor: controller.currentIndex == 2 ? AppColors.primary :AppColors.black,
-                  searchtextcolor: controller.currentIndex == 2 ? AppColors.primary :AppColors.black,
-                  revonTap: () {
-                  Get.toNamed(AppRoutes.products);
-                  // controller.updatedIndex(0);
-                }, profileonTap: () {
-                  Get.toNamed(AppRoutes.profile);
-                  // controller.updatedIndex(1);
-                }, searchonTap: () {
-                  Get.toNamed(AppRoutes.search);
-                  // controller.updatedIndex(2);
-                }),
-        ));
+         );
       }
     );
+    
   }
 }
+

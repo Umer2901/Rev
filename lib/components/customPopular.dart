@@ -7,6 +7,9 @@ import 'package:rev_delivery/app/appTextstyle.dart';
 import 'package:rev_delivery/utils/size_utils.dart';
 
 class Popular extends GetView {
+  Popular({super.key,required this.image,required this.text});
+  String image;
+  String text;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +24,7 @@ class Popular extends GetView {
               right: BorderSide(color: AppColors.primary, width: 3.0),
               )),
       child: Column(children: [
-        Image.asset(AppImages.popular),
+        Image.asset(image),
         Expanded(
           child: Container(
             //height: getVerticalSize(20),
@@ -29,7 +32,7 @@ class Popular extends GetView {
             decoration: const BoxDecoration(color: AppColors.primary),
             child: Padding(
               padding: getPadding(left: getHorizontalSize(5)),
-              child: Text('Popular',style: AppTextStyle.subheading.copyWith(fontSize: 14),),
+              child: Text(text,style: AppTextStyle.subheading.copyWith(fontSize: 14),),
             ),
           ),
         )

@@ -3,6 +3,7 @@ import 'package:rev_delivery/routes/appRoutes.dart';
 import 'package:rev_delivery/core/view/otpScreen.dart';
 import 'package:rev_delivery/core/view/storeScreen.dart';
 import 'package:rev_delivery/core/view/loginScreen.dart';
+import 'package:rev_delivery/core/view/home_wrapper.dart';
 import 'package:rev_delivery/core/view/searchScreen.dart';
 import 'package:rev_delivery/core/view/splashScreen.dart';
 import 'package:rev_delivery/core/view/profileScreen.dart';
@@ -39,6 +40,7 @@ class AppPages extends AppRoutes{
     GetPage(name: AppRoutes.checkout, page: ()=> CheckoutScreen(),),
     GetPage(name: AppRoutes.accountDetail, page: ()=> AccountDetailScreen(),),
     GetPage(name: AppRoutes.confirm, page: ()=> ConfirmScreen(),),
+    GetPage(name: AppRoutes.homeWraper, page: ()=> const HomeWrapper()),
 
   ];
 }

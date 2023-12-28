@@ -7,14 +7,14 @@ import 'package:rev_delivery/utils/size_utils.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:rev_delivery/components/customButton.dart';
 import 'package:rev_delivery/components/customedivider.dart';
-
+import 'package:rev_delivery/core/controllers/register_controller.dart';
 
 
 class RegisterScreen extends GetView {
-
   final _formkey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(RegisterController());
     return Scaffold(
       body: Padding(
         padding: getPadding(
@@ -41,10 +41,14 @@ class RegisterScreen extends GetView {
             Form(
               key: _formkey,
               child: IntlPhoneField(
-                validator: (value){
-                  if(value == null){
+                validator: (phone) {
+                  if (phone != null) {
+                    controller.phone = phone.number;
+                  }
+                  if (phone == null || phone.number == "") {
                     return 'Please Enter Number';
                   }
+
                   return null;
                 },
                 decoration: InputDecoration(
@@ -81,11 +85,11 @@ class RegisterScreen extends GetView {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomDivider(color: AppColors.primary,width: 116.0),
+                CustomDivider(color: AppColors.primary, width: 116.0),
                 SizedBox(
                   width: getHorizontalSize(5),
                 ),
-                CustomDivider(color: AppColors.gray,width: 116.0),
+                CustomDivider(color: AppColors.gray, width: 116.0),
               ],
             ),
             SizedBox(
@@ -98,7 +102,7 @@ class RegisterScreen extends GetView {
               buttoncolor: AppColors.primary,
               textcolor: AppColors.white,
               onTap: () {
-                if(_formkey.currentState!.validate()){
+                if (_formkey.currentState!.validate()) {
                   Get.toNamed(AppRoutes.otp);
                 }
               },

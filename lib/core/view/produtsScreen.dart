@@ -43,7 +43,7 @@ class ProductsScreen extends GetView {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const Icon(
-                                Icons.shopping_cart,
+                                Icons.shopping_bag,
                                 color: AppColors.white,
                               ),
                               Text('Cart',
@@ -147,36 +147,6 @@ class ProductsScreen extends GetView {
                   )
                 ],
               ),
-            ),
-            bottomNavigationBar: Obx(
-              () => CustomBottombar(
-                  profileiconcolor: controller.currentIndex == 1
-                      ? AppColors.primary
-                      : AppColors.black,
-                  profiletextcolor: controller.currentIndex == 1
-                      ? AppColors.primary
-                      : AppColors.black,
-                  revtextcolor: controller.currentIndex == 0
-                      ? AppColors.primary
-                      : AppColors.black,
-                  searchiconcolor: controller.currentIndex == 2
-                      ? AppColors.primary
-                      : AppColors.black,
-                  searchtextcolor: controller.currentIndex == 2
-                      ? AppColors.primary
-                      : AppColors.black,
-                  revonTap: () {
-                    controller.updatedIndex(0);
-                    Get.toNamed(AppRoutes.products);
-                  },
-                  profileonTap: () {
-                    controller.updatedIndex(1);
-                    Get.toNamed(AppRoutes.profile);
-                  },
-                  searchonTap: () {
-                    controller.updatedIndex(2);
-                    Get.toNamed(AppRoutes.search);
-                  }),
             ),
           );
         });

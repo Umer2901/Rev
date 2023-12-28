@@ -12,5 +12,6 @@ class AppColors {
   static const Color maroon = Color(0xff181D27);
   static const Color sky = Color(0xffACACAC);
   static const Color orange = Color(0xffFF5F00);
+  static const Color warning = Color(0xffE64646);
 
 }

@@ -14,6 +14,12 @@ class Products{
   VoidCallback onTap;
 }
 
+class SearchItems {
+  SearchItems(this.image,this.text);
+  String image;
+  String text;
+}
+
 List productList = [
   Products(AppImages.nerds, 'Nerds Gummy Clusters', '\$3.38',(){Get.toNamed(AppRoutes.productDetail);}),
   Products(AppImages.nerds, 'Nerds Gummy Clusters', '\$3.38',(){}),
@@ -27,6 +33,17 @@ List productList = [
   Products(AppImages.nerds, 'Nerds Gummy Clusters', '\$3.38',(){}),
 ];
 
-
+List SearchItemList = [
+  SearchItems(AppImages.popular, 'Popular'),
+  SearchItems(AppImages.popular, 'Popular'),
+  SearchItems(AppImages.popular, 'Popular'),
+  SearchItems(AppImages.popular, 'Popular'),
+  SearchItems(AppImages.popular, 'Popular'),
+  SearchItems(AppImages.popular, 'Popular'),
+  SearchItems(AppImages.popular, 'Popular'),
+  SearchItems(AppImages.popular, 'Popular'),
+  SearchItems(AppImages.popular, 'Popular'),
+  SearchItems(AppImages.popular, 'Popular'),
+];
 List categoryList = ['Category1', 'Category2', 'Category3'];
 List storeList = ['UCLA', 'USC', 'UCSB','ASU','UT AUSTIN'];
