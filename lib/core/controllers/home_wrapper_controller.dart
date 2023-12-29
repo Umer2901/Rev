@@ -32,47 +32,50 @@ class HomeWrapController extends GetxController {
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(22),
               ),
-              child: Column(
-              children: [
-                SizedBox(
-                  height: getVerticalSize(91),
-                  width: getHorizontalSize(91),
-                  child: Image.asset(
-                    AppImages.eighteen,
-                    fit: BoxFit.fill,
+              child: Padding(
+                padding: getPadding(top: getVerticalSize(44)),
+                child: Column(
+                children: [
+                  SizedBox(
+                    height: getVerticalSize(91),
+                    width: getHorizontalSize(91),
+                    child: Image.asset(
+                      AppImages.eighteen,
+                      fit: BoxFit.fill,
+                    ),
                   ),
-                ),
-                Text(
-                  'Age',
-                  style: AppTextStyle.subheading
-                      .copyWith(fontWeight: FontWeight.w500, fontSize: 22),
-                ),
-                Text(
-                  'Are you 18+',
-                  style: AppTextStyle.smallText.copyWith(fontSize: 12),
-                ),
-                SizedBox(height: getVerticalSize(15)),
-                Button(
-                    buttonheight: 54.0,
-                    buttonwidth: 340.0,
-                    buttonRadius: 8.0,
-                    buttoncolor: AppColors.primary,
-                    textcolor: AppColors.white,
-                    onTap: (){Get.back();},
-                    bordercolor: Colors.transparent,
-                    buttonText: 'Yes'),
-                    SizedBox(height: getVerticalSize(5),),
-                    Button(
-                    buttonheight: 54.0,
-                    buttonwidth: 340.0,
-                    buttonRadius: 8.0,
-                    buttoncolor: AppColors.white,
-                    textcolor: AppColors.warning,
-                    onTap: (){Get.offNamed(AppRoutes.products);},
-                    bordercolor: AppColors.warning,
-                    buttonText: 'No'),
-              ],
+                  Text(
+                    'Age',
+                    style: AppTextStyle.subheading
+                        .copyWith(fontWeight: FontWeight.w500, fontSize: 22),
                   ),
+                  Text(
+                    'Are you 18+',
+                    style: AppTextStyle.smallText.copyWith(fontSize: 12),
+                  ),
+                  SizedBox(height: getVerticalSize(15)),
+                  Button(
+                      buttonheight: 54.0,
+                      buttonwidth: 340.0,
+                      buttonRadius: 8.0,
+                      buttoncolor: AppColors.primary,
+                      textcolor: AppColors.white,
+                      onTap: (){Get.back();},
+                      bordercolor: Colors.transparent,
+                      buttonText: 'Yes'),
+                      SizedBox(height: getVerticalSize(5),),
+                      Button(
+                      buttonheight: 54.0,
+                      buttonwidth: 340.0,
+                      buttonRadius: 8.0,
+                      buttoncolor: AppColors.white,
+                      textcolor: AppColors.warning,
+                      onTap: (){Get.offAllNamed(AppRoutes.splash);},
+                      bordercolor: AppColors.warning,
+                      buttonText: 'No'),
+                ],
+                    ),
+              ),
             ),
           ),
         ),

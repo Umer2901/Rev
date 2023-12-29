@@ -204,7 +204,7 @@ class ConfirmScreen extends GetView {
                       buttonRadius: 27.0,
                       buttoncolor: AppColors.primary,
                       textcolor: AppColors.white,
-                      onTap: (){Get.offNamed(AppRoutes.products);},
+                      onTap: (){Get.offNamed(AppRoutes.homeWraper);},
                       bordercolor: Colors.transparent,
                       buttonText: 'Go to Browser')
                 ],
