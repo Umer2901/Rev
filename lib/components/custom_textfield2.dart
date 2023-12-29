@@ -38,7 +38,7 @@ class CustomTextField2 extends GetView {
             obscureText: obscuretext,
             decoration: InputDecoration(
               filled: true,
-              fillColor: AppColors.light,
+              fillColor: AppColors.lightgray,
               enabledBorder: OutlineInputBorder(
                   borderSide:
                       const BorderSide(color: AppColors.lightgray),

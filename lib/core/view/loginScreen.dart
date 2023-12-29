@@ -65,12 +65,13 @@ class LoginScreen extends GetView {
                     //SizedBox(height: ksize.height < 820 ?  getVerticalSize(220) : getVerticalSize(240),),
                     const Spacer(),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        CustomDivider(color: AppColors.gray, width: 110.0),
+                        CustomDivider(color: AppColors.gray, width: ksize.width < 600 ? 110.0 : 90.0),
                         SizedBox(width: getHorizontalSize(5)),
-                        CustomDivider(color: AppColors.gray, width: 110.0),
+                        CustomDivider(color: AppColors.gray, width: ksize.width < 600 ? 110.0 : 90.0),
                         SizedBox(width: getHorizontalSize(5)),
-                        CustomDivider(color: AppColors.primary, width: 110.0),
+                        CustomDivider(color: AppColors.primary, width: ksize.width < 600 ? 110.0 : 90.0),
                       ],
                     ),
                     SizedBox(height: getVerticalSize(10)),

@@ -16,6 +16,7 @@ import 'package:rev_delivery/components/customBackbutton.dart';
 class ProductDetail extends GetView {
   @override
   Widget build(BuildContext context) {
+    final ksize = MediaQuery.of(context).size;
     return GetBuilder(
       init: ProductOpenScreenController(),
       builder: (controller) {
@@ -241,11 +242,11 @@ class ProductDetail extends GetView {
                     child: Column(
                       children: [
                         GridView.builder(
-                            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                            gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2,
                               crossAxisSpacing: 10.0,
                               mainAxisSpacing: 8.0,
-                              mainAxisExtent: 210.0,
+                              mainAxisExtent: ksize.height < 950 ? 220.0 : 270.0,
                             ),
                             itemCount: 5,
                             shrinkWrap: true,

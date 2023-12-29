@@ -12,6 +12,7 @@ class Popular extends GetView {
   String text;
   @override
   Widget build(BuildContext context) {
+    final ksize = MediaQuery.of(context).size;
     return Container(
       height: getVerticalSize(150),
       width: getHorizontalSize(150),

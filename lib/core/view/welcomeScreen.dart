@@ -11,13 +11,14 @@ import 'package:rev_delivery/components/customButton.dart';
 class WelcomeScreen extends GetView {
   @override
   Widget build(BuildContext context) {
+    final ksize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppColors.primary,
       body: Padding(
         padding: getPadding(left: getHorizontalSize(21),right: getHorizontalSize(21),top: getVerticalSize(53)),
         child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
           Padding(
-            padding: getPadding(right: getHorizontalSize(40)),
+            padding: getPadding(right: ksize.width < 600 ? getHorizontalSize(40) : getHorizontalSize(20)),
             child: Container(
                 height: getVerticalSize(478),
                 width: getHorizontalSize(330),

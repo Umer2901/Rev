@@ -14,6 +14,7 @@ import 'package:rev_delivery/core/bindings/product_screen_binging.dart';
 class ProductsScreen extends GetView {
   @override
   Widget build(BuildContext context) {
+    final ksize = MediaQuery.of(context).size;
     return GetBuilder(
         init: ProductController(),
         builder: (controller) {
@@ -83,30 +84,6 @@ class ProductsScreen extends GetView {
                               );
                             }).toList()),
                       ),
-                      // Container(
-                      //   height: getVerticalSize(40),
-                      //   width: getHorizontalSize(122),
-                      //   decoration: BoxDecoration(
-                      //       color: AppColors.primary,
-                      //       borderRadius: BorderRadius.circular(10)),
-                      //   child: Row(
-                      //       mainAxisAlignment: MainAxisAlignment.center,
-                      //       children: [
-                      //         Text(
-                      //           'Category',
-                      //           style: AppTextStyle.subheading
-                      //               .copyWith(color: AppColors.white, fontSize: 14),
-                      //         ),
-                      //         SizedBox(
-                      //           width: getHorizontalSize(5),
-                      //         ),
-                      //         const Icon(
-                      //           Icons.keyboard_arrow_down,
-                      //           color: AppColors.white,
-                      //           size: 20,
-                      //         ),
-                      //       ]),
-                      // ),
                       const Spacer(),
                       const Text(
                         '374 Products',
@@ -123,11 +100,11 @@ class ProductsScreen extends GetView {
                         children: [
                           GridView.builder(
                               gridDelegate:
-                                  const SliverGridDelegateWithFixedCrossAxisCount(
+                                   SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
                                 mainAxisSpacing: 15.0,
                                 crossAxisSpacing: 12.0,
-                                mainAxisExtent: 220.0,
+                                mainAxisExtent: ksize.height < 950 ? 220.0 : 270.0,
                               ),
                               itemCount: productList.length,
                               physics: const ScrollPhysics(),

@@ -79,6 +79,7 @@ class SearchScreen extends GetView {
                                   crossAxisCount: 2,
                                   crossAxisSpacing: getVerticalSize(10),
                                   mainAxisSpacing: getHorizontalSize(20),
+                                  mainAxisExtent: 144.0
                                   ),
                               itemBuilder: (context,index){
                                 return Popular(image: SearchItemList[index].image, text: SearchItemList[index].text,);

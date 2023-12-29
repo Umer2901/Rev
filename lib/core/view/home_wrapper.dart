@@ -79,7 +79,7 @@ class HomeWrapper extends StatelessWidget {
                         Icons.person_2_outlined,
                         color: AppColors.black,
                       ),
-                    label: 'Client',
+                    label: 'Profile',
                     activeIcon: Icon(
                         Icons.person_2_outlined,
                         color: AppColors.primary,

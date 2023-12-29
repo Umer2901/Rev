@@ -18,7 +18,7 @@ class StoreScreen extends GetView {
       body: Column(
         children: [
           Padding(
-            padding: getPadding(right: getHorizontalSize(40),),
+            padding: getPadding(right: ksize.width < 600 ? getHorizontalSize(40) : getHorizontalSize(30),),
             child: SizedBox(
               height: ksize.height < 820 ? getVerticalSize(400) : getVerticalSize(465),
               width: getHorizontalSize(330),

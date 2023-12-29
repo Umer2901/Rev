@@ -14,6 +14,7 @@ import 'package:rev_delivery/core/controllers/checkout_screen_controller.dart';
 class CheckoutScreen extends GetView {
   @override
   Widget build(BuildContext context) {
+    final ksize = MediaQuery.of(context).size;
     return GetBuilder(
         init: CheckoutScreenController(),
         builder: (controller) {
@@ -40,7 +41,7 @@ class CheckoutScreen extends GetView {
                         },
                         child: Container(
                           height: getVerticalSize(50),
-                          width: getHorizontalSize(100),
+                          width: ksize.width < 600 ? getHorizontalSize(100) : getHorizontalSize(85),
                           decoration: BoxDecoration(
                             color: AppColors.light,
                             borderRadius: BorderRadius.circular(10),
@@ -59,7 +60,7 @@ class CheckoutScreen extends GetView {
                         },
                         child: Container(
                           height: getVerticalSize(50),
-                          width: getHorizontalSize(100),
+                          width: ksize.width < 600 ? getHorizontalSize(100) : getHorizontalSize(85),
                           decoration: BoxDecoration(
                             color: AppColors.light,
                             borderRadius: BorderRadius.circular(10),
@@ -78,7 +79,7 @@ class CheckoutScreen extends GetView {
                         },
                         child: Container(
                           height: getVerticalSize(50),
-                          width: getHorizontalSize(100),
+                          width: ksize.width < 600 ? getHorizontalSize(100) : getHorizontalSize(85),
                           decoration: BoxDecoration(
                             color: AppColors.light,
                             borderRadius: BorderRadius.circular(10),
@@ -127,11 +128,11 @@ class CheckoutScreen extends GetView {
                               CustomTextField2(
                                   hinttext: '24/24',
                                   title: 'Exp',
-                                  widthsize: 160.0),
+                                  widthsize: ksize.width < 600 ? 160.0 : 130.0),
                               CustomTextField2(
                                   hinttext: '7763',
                                   title: 'CVV',
-                                  widthsize: 160.0),
+                                  widthsize: ksize.width < 600 ? 160.0 : 130.0),
                             ],
                           ),
                           SizedBox(
